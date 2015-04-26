@@ -1,0 +1,50 @@
+<template name="leaderboard">
+
+        <main>
+          <div class="main-header">
+
+            <img src="/img/iati_logo.png" title="leaderboard"/>
+            <h1>IATI LEADERBOARD</h1>
+            <p>The IATI leaderboard shows youconsectetur adipiscing elit. Ut pellentesque elementum lorem, sit amet lacinia.</p>
+
+          </div>
+
+
+          <!-- The toggle option to toggle between published and non-published -->
+          <div class="main-sort">
+            <a href="" alt="" class ="published">Published</a>
+
+            <a href="" alt="" class="implementing">Unpublished</a>
+          </div>
+
+
+          <div class="leaderboard">
+
+
+            <!-- published example -->
+            <!-- change the onclick to the right page of the company -->
+
+
+
+
+            <!-- non-published examples -->
+            <!-- change the onclick to the right page of the company -->
+            <!-- set the progress by changing the width style of the progress div -->
+            <!-- set the step icon of the current step by adding the step value to the icon div.
+            Values are: step1, step2, step3, step4, step5. See examples below of all the steps-->
+
+              {{#each organisation}}
+            <div class="row" onclick="window.location='{{pathFor 'orgPage'}}';">
+              <div class="progress" style="width:80%"></div>
+              <div class="icon step5"></div>
+              <div class="content">
+                <h3>{{name}}</h3>
+                <p>Unpublished</p>
+              </div>
+            </div>
+{{/each}}
+
+
+</div>
+        </main>
+</template>

@@ -1,0 +1,101 @@
+<template name = "admin">
+    <div class="btn-group" data-toggle="buttons-radio">
+        <button class="btn btn-small implementing" type="button">Implementing</button>
+        <button class="btn btn-small published" type="button">Published</button>
+
+    </div>
+
+
+
+    {{#if published}}
+
+
+    <div class ="addorganisation input-large">
+        <div><h4>Add publishing organisation:</h4>
+            <input type="text" class="publishing_org_name form-control input-xxlarge" placeholder="Organisation name">
+            <input type="text" class="publishing_org_score form-control input-xxlarge" placeholder="Score"></div>
+        <button class="btn btn-small add" type="button">Add organisation</button>
+    </div>
+
+
+    <div class ="removeorganisations input-large" id ="removeorganisation">
+        <div><h4>Remove publishing organisation:</h4>
+            <select class="form-control input-xxlarge removeorganisation" id="selectedorganisation">
+
+                {{#each publishedorganisation}}
+
+                <option value="{{this._id}}">{{this.name}}</option>
+
+                {{/each}}
+
+            </select>
+        <button class="btn btn-small remove" type="button">Remove organisation</button>
+    </div>
+        </div>
+
+
+
+    <div class ="removeorganisations input-large" id ="removeorganisation">
+        <div><h4>Change score publishing organisation:</h4>
+            <select class="form-control input-xxlarge removeorganisation" id="editorganisation">
+
+                {{#each publishedorganisation}}
+
+                <option value="{{this._id}}">{{this.name}}</option>
+
+                {{/each}}
+
+            </select>
+            <input type="text" class="publishing_org_score_edit form-control input-xxlarge" placeholder="Score"></div>
+            <button class="btn btn-small edit" type="button">Edit Score</button>
+        </div>
+
+
+
+
+        {{else}}
+
+    <div class ="addorganisation input-large">
+        <div><h4>Add implementing organisation:</h4>
+            <input type="text" class="implementing_org_name form-control input-xxlarge" placeholder="Organisation name">
+            <input type="text" class="implementing_org_score form-control input-xxlarge" placeholder="Score"></div>
+        <button class="btn btn-small addimplementing" type="button">Add organisation</button>
+    </div>
+
+    <div class ="removeorganisations input-large" id ="removeorganisation">
+        <div><h4>Remove implementing organisation:</h4>
+            <select class="form-control input-xxlarge removeorganisation" id="selectedimplementingorganisation">
+
+                {{#each implementingorganisation}}
+
+                <option value="{{this._id}}">{{this.name}}</option>
+
+                {{/each}}
+
+            </select>
+            <button class="btn btn-small removeimplementing" type="button">Remove organisation</button>
+        </div>
+    </div>
+
+    <div class ="removeorganisations input-large" id ="removeorganisation">
+        <div><h4>Change score Implementing organisation:</h4>
+            <select class="form-control input-xxlarge removeorganisation" id="editimplementingorganisation">
+
+                {{#each implementingorganisation}}
+
+                <option value="{{this._id}}">{{this.name}}</option>
+
+                {{/each}}
+
+            </select>
+            <input type="text" class="implementing_org_score_edit form-control input-xxlarge" placeholder="Score"></div>
+        <button class="btn btn-small editimplementing" type="button">Edit Score</button>
+    </div>
+
+
+    {{/if}}
+
+
+
+
+</template>
