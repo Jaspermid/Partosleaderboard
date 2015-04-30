@@ -1,101 +1,145 @@
-<template name = "admin">
-    <div class="btn-group" data-toggle="buttons-radio">
-        <button class="btn btn-small implementing" type="button">Implementing</button>
-        <button class="btn btn-small published" type="button">Published</button>
-
-    </div>
+    <template name = "admin">
 
 
+        <main>
+          <div class="main-header">
+            <img src="/img/iati_logo.png" title="leaderboard"/>
+            <h1>Admin IATI Leaderboard</h1>
 
-    {{#if published}}
+            <!-- Toggling between editing published and implementing organisation --> 
+            <div class="main-sort">
+                <a href="" alt="" class ="published">Published</a>
+                <a href="" alt="" class="implementing">Unpublished</a>
+            </div>
+
+            <!-- Editing of organisations that have published --> 
+            {{#if published}}
+
+            <!-- Add a publishing organisation -->
+
+            <div class ="admin-container">
+                <h3 class = "admintitle">Add publishing organisation:</h3>
+                <input type="text" class="publishing_org_name form-control input-xxlarge" placeholder="Organisation name">     
+                <input type="text" class="publishing_org_description form-control input-xxlarge" placeholder="Organisation description">
+                <input type="text" class="publishing_org_logo form-control input-xxlarge" placeholder="Logo Url">
+                <input type="text" class="publishing_org_notes form-control input-xxlarge" placeholder="Notes">
+                <input type="text" class="publishing_org_date form-control input-xxlarge" placeholder="Date of first publication">
+                <input type="text" class="publishing_org_number form-control input-xxlarge" placeholder="Number of activities in IATI publication">
+                <input type="text" class="publishing_org_file form-control input-xxlarge" placeholder="Link to IATI file">
+                <input type="text" class="publishing_org_exclusion form-control input-xxlarge" placeholder="Exclusion policy">
+                <input type="text" class="publishing_org_schedule form-control input-xxlarge" placeholder="Implementation schedule">
+                <div class="main-sort">
+                    <a href="" alt="" class ="add">Add</a>
+                </div>
+            </div>
+
+            <!-- Remove a publishing organisation -->
+
+            <div class = "admin-container">
+                <div class ="removeorganisations" id ="removeorganisation">
+                    <h3 class = "admintitle">Remove publishing organisation:</h3>
+                    <select class="form-control input-xxlarge removeorganisation" id="selectedorganisation">
+
+                        {{#each publishedorganisation}}
+
+                        <option value="{{this._id}}">{{this.name}}</option>
+
+                        {{/each}}
+
+                    </select>
+                    <div class="main-sort">
+                        <a href="" alt="" class ="remove">Remove</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Change a publishing organisation -->
+
+            <div class = "admin-container">
+
+                <div><h3 class = "admintitle">Change score publishing organisation:</h3>
+                    <select class="form-control input-xxlarge edit" id="editorganisation">
+                       <option selected disabled hidden value=''></option>
+                       {{#each publishedorganisation}}
+
+                       <option value="{{this._id}}">{{this.name}}</option>
+
+                       {{/each}}
+
+                   </select>
 
 
-    <div class ="addorganisation input-large">
-        <div><h4>Add publishing organisation:</h4>
-            <input type="text" class="publishing_org_name form-control input-xxlarge" placeholder="Organisation name">
-            <input type="text" class="publishing_org_score form-control input-xxlarge" placeholder="Score"></div>
-        <button class="btn btn-small add" type="button">Add organisation</button>
-    </div>
+
+                   <input type="text" class="publishing_org_name_edit form-control input-xxlarge" placeholder="Organisation name">     
+                   <input type="text" class="publishing_org_description_edit form-control input-xxlarge" placeholder="Organisation description">
+                   <input type="text" class="publishing_org_logo_edit form-control input-xxlarge" placeholder="Logo Url">
+                   <input type="text" class="publishing_org_notes_edit form-control input-xxlarge" placeholder="Notes">
+                   <input type="text" class="publishing_org_date_edit form-control input-xxlarge" placeholder="Date of first publication">
+                   <input type="text" class="publishing_org_number_edit form-control input-xxlarge" placeholder="Number of activities in IATI publication">
+                   <input type="text" class="publishing_org_file_edit form-control input-xxlarge" placeholder="Link to IATI file">
+                   <input type="text" class="publishing_org_exclusion_edit form-control input-xxlarge" placeholder="Exclusion policy">
+                   <input type="text" class="publishing_org_schedule_edit form-control input-xxlarge" placeholder="Implementation schedule">
 
 
-    <div class ="removeorganisations input-large" id ="removeorganisation">
-        <div><h4>Remove publishing organisation:</h4>
-            <select class="form-control input-xxlarge removeorganisation" id="selectedorganisation">
+               </div>
+               <div class="main-sort">
+                <a href="" alt="" class ="edit">Edit</a>
+            </div>       
 
-                {{#each publishedorganisation}}
 
-                <option value="{{this._id}}">{{this.name}}</option>
-
-                {{/each}}
-
-            </select>
-        <button class="btn btn-small remove" type="button">Remove organisation</button>
-    </div>
         </div>
-
-
-
-    <div class ="removeorganisations input-large" id ="removeorganisation">
-        <div><h4>Change score publishing organisation:</h4>
-            <select class="form-control input-xxlarge removeorganisation" id="editorganisation">
-
-                {{#each publishedorganisation}}
-
-                <option value="{{this._id}}">{{this.name}}</option>
-
-                {{/each}}
-
-            </select>
-            <input type="text" class="publishing_org_score_edit form-control input-xxlarge" placeholder="Score"></div>
-            <button class="btn btn-small edit" type="button">Edit Score</button>
-        </div>
-
-
 
 
         {{else}}
 
-    <div class ="addorganisation input-large">
-        <div><h4>Add implementing organisation:</h4>
-            <input type="text" class="implementing_org_name form-control input-xxlarge" placeholder="Organisation name">
-            <input type="text" class="implementing_org_score form-control input-xxlarge" placeholder="Score"></div>
-        <button class="btn btn-small addimplementing" type="button">Add organisation</button>
-    </div>
+        <div class ="addorganisation input-large">
+            <div><h4>Add implementing organisation:</h4>
+                <input type="text" class="implementing_org_name form-control input-xxlarge" placeholder="Organisation name">
+                <input type="text" class="implementing_org_score form-control input-xxlarge" placeholder="Score"></div>
+                <button class="btn btn-small addimplementing" type="button">Add organisation</button>
+            </div>
 
-    <div class ="removeorganisations input-large" id ="removeorganisation">
-        <div><h4>Remove implementing organisation:</h4>
-            <select class="form-control input-xxlarge removeorganisation" id="selectedimplementingorganisation">
+            <div class ="removeorganisations input-large" id ="removeorganisation">
+                <div><h4>Remove implementing organisation:</h4>
+                    <select class="form-control input-xxlarge removeorganisation" id="selectedimplementingorganisation">
 
-                {{#each implementingorganisation}}
+                        {{#each implementingorganisation}}
 
-                <option value="{{this._id}}">{{this.name}}</option>
+                        <option value="{{this._id}}">{{this.name}}</option>
 
-                {{/each}}
+                        {{/each}}
 
-            </select>
-            <button class="btn btn-small removeimplementing" type="button">Remove organisation</button>
-        </div>
-    </div>
+                    </select>
+                    <button class="btn btn-small removeimplementing" type="button">Remove organisation</button>
+                </div>
+            </div>
 
-    <div class ="removeorganisations input-large" id ="removeorganisation">
-        <div><h4>Change score Implementing organisation:</h4>
-            <select class="form-control input-xxlarge removeorganisation" id="editimplementingorganisation">
+            <div class ="removeorganisations input-large" id ="removeorganisation">
+                <div><h4>Change score Implementing organisation:</h4>
+                    <select class="form-control input-xxlarge removeorganisation" id="editimplementingorganisation">
 
-                {{#each implementingorganisation}}
+                        {{#each implementingorganisation}}
 
-                <option value="{{this._id}}">{{this.name}}</option>
+                        <option value="{{this._id}}">{{this.name}}</option>
 
-                {{/each}}
+                        {{/each}}
 
-            </select>
-            <input type="text" class="implementing_org_score_edit form-control input-xxlarge" placeholder="Score"></div>
-        <button class="btn btn-small editimplementing" type="button">Edit Score</button>
-    </div>
+                    </select>
 
 
-    {{/if}}
+                </div>
+                <button class="btn btn-small editimplementing" type="button">Edit Score</button>
+            </div>
+
+
+            {{/if}}  </div>
+
+        </main>
 
 
 
 
-</template>
+
+    </template>

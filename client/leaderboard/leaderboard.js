@@ -7,15 +7,31 @@ Template.leaderboard.rendered = function (){
     $('.sort_by_score').addClass("active");
     Session.set ("sort_by_score", true)
     $('.published').addClass("active");
-    Session.set ("Published", true)
+
+    if (Session.get('Published') === undefined){
+        Session.set ("Published", true)
+    }
+
+
+    if (Session.get('Published')){
+        $('.published').addClass("selected")
+    }
+    else {
+        $('.implementing').addClass("selected")
+
+    }
 
 }
 
 
 Template.leaderboard.helpers ({
+
+        published: function(){
+            return Session.get('Published')
+        },
+
     organisation: function () {
         if (Session.get('sort_by_score')) {
-
 
             if (Session.get('Published')) {
                 return Published.find({}, {sort: {score: -1}});
@@ -38,11 +54,15 @@ Template.leaderboard.helpers ({
                     ]});
                 }
             }
-            }
+            },
 
 
+        type: function () {
+            return "publishedPage";
+        }
 
     }
+
 
 
 );
@@ -51,10 +71,14 @@ Template.leaderboard.events ({
 
     'click .published': function (){
         Session.set ("Published", true)
+        $('.implementing').removeClass("selected")
+        $('.published').addClass("selected")
     },
 
     'click .implementing': function (){
         Session.set ("Published", false)
+        $('.implementing').addClass("selected")
+        $('.published').removeClass("selected")
     },
 
 

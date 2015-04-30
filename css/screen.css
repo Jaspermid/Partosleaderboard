@@ -196,15 +196,16 @@ main {
     background: #F5A623;
     left: 0px;
     top: 0px; }
-  .leaderboard .icon {
+  .leaderboard .date {
     z-index: 2;
     height: 100%;
     position: absolute;
-    width: 50px;
-    top: 0;
+    width: 70px;
+    margin-top: auto;
+    margin-bottom: auto;
     right: 0;
-    background-repeat: no-repeat;
-    background-position: center center; }
+      marging-right: 3000px;
+     }
   .leaderboard .content {
     z-index: 9;
     position: relative; }
@@ -328,3 +329,7 @@ main {
   width: 50px;
   background-repeat: no-repeat;
   background-position: center center; }
+
+.logo {
+  max-width:20%;
+}

@@ -21,30 +21,34 @@
           <div class="leaderboard">
 
 
-            <!-- published example -->
-            <!-- change the onclick to the right page of the company -->
 
+<!-- list the published  organisations--> 
 
+{{#if published}}
+        {{#each organisation}}
+            <div class="row" onclick="window.location='{{pathFor 'publishedPage'}}';">
+              <div class="progress" style="width:100%"></div>
+              <div class="date">{{date}}</div>
+              <div class="content">
+                <h3>{{name}}</h3>
+                <p>Number of IATI activities: {{number}}</p>
+              </div>
+            </div>
+        {{/each}}
 
+<!-- list the organisation not yet published --> 
 
-            <!-- non-published examples -->
-            <!-- change the onclick to the right page of the company -->
-            <!-- set the progress by changing the width style of the progress div -->
-            <!-- set the step icon of the current step by adding the step value to the icon div.
-            Values are: step1, step2, step3, step4, step5. See examples below of all the steps-->
-
-              {{#each organisation}}
-            <div class="row" onclick="window.location='{{pathFor 'orgPage'}}';">
+{{else}}
+ {{#each organisation}}
+            <div class="row" onclick="window.location='{{pathFor 'implementingPage'}}';">
               <div class="progress" style="width:80%"></div>
               <div class="icon step5"></div>
               <div class="content">
                 <h3>{{name}}</h3>
-                <p>Unpublished</p>
+                <p>Third round of Partos IATI programme</p>
               </div>
             </div>
-{{/each}}
-
-
+{{/each}}{{/if}}
 </div>
         </main>
 </template>
