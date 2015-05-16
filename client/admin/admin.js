@@ -130,17 +130,22 @@ Template.admin.events ({
 
     'click .addimplementing': function(){
 
-
         Implementing.insert(
         {
-            "name": $('.implementing_org_name').val(),
-            "score": $('.implementing_org_score').val()
+            "name": $('.publishing_org_name').val(),
+            "description": $('.publishing_org_description').val(),
+            "logo": $('.publishing_org_logo').val(),
+            "notes": $('.publishing_org_notes').val(),
+            "date": $('.publishing_org_date').val(),
+            "number": $('.publishing_org_number').val(),
+            "file": $('.publishing_org_file').val(),
+            "exclusion": $('.publishing_org_exclusion').val(),
+            "schedule": $('.publishing_org_schedule').val(),
         }
 
         )
-
-
     },
+
 
     'click .removeimplementing': function(){
 

@@ -94,6 +94,82 @@
 
         {{else}}
 
+
+ <div class ="admin-container">
+                <h3 class = "admintitle">Add implementing organisation:</h3>
+                <input type="text" class="implementing_org_name form-control input-xxlarge" placeholder="Organisation name">     
+                <input type="text" class="implementing_org_description form-control input-xxlarge" placeholder="Organisation description">
+                <input type="text" class="implementing_org_logo form-control input-xxlarge" placeholder="Logo Url">
+                <input type="text" class="implementing_org_notes form-control input-xxlarge" placeholder="Notes">
+                <input type="text" class="implementing_org_date form-control input-xxlarge" placeholder="Date of first publication">
+                <input type="text" class="implementing_org_number form-control input-xxlarge" placeholder="Number of activities in IATI publication">
+                <input type="text" class="implementing_org_file form-control input-xxlarge" placeholder="Link to IATI file">
+                <input type="text" class="implementing_org_exclusion form-control input-xxlarge" placeholder="Exclusion policy">
+                <input type="text" class="implementing_org_schedule form-control input-xxlarge" placeholder="Implementation schedule">
+                <div class="main-sort">
+                    <a href="" alt="" class ="add">Add</a>
+                </div>
+            </div>
+
+            <!-- Remove a implementing organisation -->
+
+            <div class = "admin-container">
+                <div class ="removeorganisations" id ="removeorganisation">
+                    <h3 class = "admintitle">Remove publishing organisation:</h3>
+                    <select class="form-control input-xxlarge removeorganisation" id="selectedorganisation">
+
+                        {{#each publishedorganisation}}
+
+                        <option value="{{this._id}}">{{this.name}}</option>
+
+                        {{/each}}
+
+                    </select>
+                    <div class="main-sort">
+                        <a href="" alt="" class ="remove">Remove</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Change a implementing organisation -->
+
+            <div class = "admin-container">
+
+                <div><h3 class = "admintitle">Change score implementing organisation:</h3>
+                    <select class="form-control input-xxlarge edit" id="editorganisation">
+                       <option selected disabled hidden value=''></option>
+                       {{#each publishedorganisation}}
+
+                       <option value="{{this._id}}">{{this.name}}</option>
+
+                       {{/each}}
+
+                   </select>
+
+
+
+                   <input type="text" class="implementing_org_name_edit form-control input-xxlarge" placeholder="Organisation name">     
+                   <input type="text" class="implementing_org_description_edit form-control input-xxlarge" placeholder="Organisation description">
+                   <input type="text" class="implementing_org_logo_edit form-control input-xxlarge" placeholder="Logo Url">
+                   <input type="text" class="implementing_org_notes_edit form-control input-xxlarge" placeholder="Notes">
+                   <input type="text" class="implementing_org_date_edit form-control input-xxlarge" placeholder="Date of first publication">
+                   <input type="text" class="implementing_org_number_edit form-control input-xxlarge" placeholder="Number of activities in IATI publication">
+                   <input type="text" class="implementing_org_file_edit form-control input-xxlarge" placeholder="Link to IATI file">
+                   <input type="text" class="implementing_org_exclusion_edit form-control input-xxlarge" placeholder="Exclusion policy">
+                   <input type="text" class="implementing_org_schedule_edit form-control input-xxlarge" placeholder="Implementation schedule">
+
+
+               </div>
+               <div class="main-sort">
+                <a href="" alt="" class ="edit">Edit</a>
+            </div>       
+
+
+        </div>
+
+
         <div class ="addorganisation input-large">
             <div><h4>Add implementing organisation:</h4>
                 <input type="text" class="implementing_org_name form-control input-xxlarge" placeholder="Organisation name">
