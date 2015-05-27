@@ -342,12 +342,12 @@ main {
   position: relative;
 }
 
-.icon{
+.iconlist {
 
   height: 50px;
   width: 50px;
   float:right;
   background-repeat: no-repeat;
-  background-color:#F5A623 ;
+  
   padding-bottom: 100px;
 }
