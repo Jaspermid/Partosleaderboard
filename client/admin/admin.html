@@ -94,6 +94,8 @@
 
         {{else}}
 
+        <!--admin for unpublished/implementing organisation-->
+
 
  <div class ="admin-container">
                 <h3 class = "admintitle">Add implementing organisation:</h3>
@@ -106,8 +108,9 @@
                 <input type="text" class="implementing_org_file form-control input-xxlarge" placeholder="Link to IATI file">
                 <input type="text" class="implementing_org_exclusion form-control input-xxlarge" placeholder="Exclusion policy">
                 <input type="text" class="implementing_org_schedule form-control input-xxlarge" placeholder="Implementation schedule">
+                 <input type="text" class="implementing_org_phase form-control input-xxlarge" placeholder="Implementation phase">
                 <div class="main-sort">
-                    <a href="" alt="" class ="add">Add</a>
+                    <a href="" alt="" class ="addimplementing">Add</a>
                 </div>
             </div>
 
@@ -115,10 +118,10 @@
 
             <div class = "admin-container">
                 <div class ="removeorganisations" id ="removeorganisation">
-                    <h3 class = "admintitle">Remove publishing organisation:</h3>
-                    <select class="form-control input-xxlarge removeorganisation" id="selectedorganisation">
+                    <h3 class = "admintitle">Remove implementing organisation:</h3>
+                    <select class="form-control input-xxlarge removeorganisation" id="selectedimplementingorganisation">
 
-                        {{#each publishedorganisation}}
+                        {{#each implementingorganisation}}
 
                         <option value="{{this._id}}">{{this.name}}</option>
 
@@ -126,7 +129,7 @@
 
                     </select>
                     <div class="main-sort">
-                        <a href="" alt="" class ="remove">Remove</a>
+                        <a href="" alt="" class ="removeimplementing">Remove</a>
                     </div>
 
                 </div>
@@ -138,9 +141,9 @@
             <div class = "admin-container">
 
                 <div><h3 class = "admintitle">Change score implementing organisation:</h3>
-                    <select class="form-control input-xxlarge edit" id="editorganisation">
+                    <select class="form-control input-xxlarge editimplementing" id="editimplementingorganisation">
                        <option selected disabled hidden value=''></option>
-                       {{#each publishedorganisation}}
+                       {{#each implementingorganisation}}
 
                        <option value="{{this._id}}">{{this.name}}</option>
 
@@ -159,6 +162,7 @@
                    <input type="text" class="implementing_org_file_edit form-control input-xxlarge" placeholder="Link to IATI file">
                    <input type="text" class="implementing_org_exclusion_edit form-control input-xxlarge" placeholder="Exclusion policy">
                    <input type="text" class="implementing_org_schedule_edit form-control input-xxlarge" placeholder="Implementation schedule">
+                   <input type="text" class="implementing_org_phase_edit form-control input-xxlarge" placeholder="Implementation phase (1-5)">
 
 
                </div>
@@ -170,44 +174,6 @@
         </div>
 
 
-        <div class ="addorganisation input-large">
-            <div><h4>Add implementing organisation:</h4>
-                <input type="text" class="implementing_org_name form-control input-xxlarge" placeholder="Organisation name">
-                <input type="text" class="implementing_org_score form-control input-xxlarge" placeholder="Score"></div>
-                <button class="btn btn-small addimplementing" type="button">Add organisation</button>
-            </div>
-
-            <div class ="removeorganisations input-large" id ="removeorganisation">
-                <div><h4>Remove implementing organisation:</h4>
-                    <select class="form-control input-xxlarge removeorganisation" id="selectedimplementingorganisation">
-
-                        {{#each implementingorganisation}}
-
-                        <option value="{{this._id}}">{{this.name}}</option>
-
-                        {{/each}}
-
-                    </select>
-                    <button class="btn btn-small removeimplementing" type="button">Remove organisation</button>
-                </div>
-            </div>
-
-            <div class ="removeorganisations input-large" id ="removeorganisation">
-                <div><h4>Change score Implementing organisation:</h4>
-                    <select class="form-control input-xxlarge removeorganisation" id="editimplementingorganisation">
-
-                        {{#each implementingorganisation}}
-
-                        <option value="{{this._id}}">{{this.name}}</option>
-
-                        {{/each}}
-
-                    </select>
-
-
-                </div>
-                <button class="btn btn-small editimplementing" type="button">Edit Score</button>
-            </div>
 
 
             {{/if}}  </div>

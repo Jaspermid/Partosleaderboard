@@ -39,13 +39,17 @@
 
 {{else}}
  {{#each organisation}}
+
             <div class="row" onclick="window.location='{{pathFor 'implementingPage'}}';">
-              <div class="progress" style="width:80%"></div>
-              <div class="icon step5"></div>
+              <div class="progress" style="width:100%"></div>
+
               <div class="content">
+                 <div class="icon step{{number}}"></div>
                 <h3>{{name}}</h3>
                 <p>Third round of Partos IATI programme</p>
+
               </div>
+
             </div>
 {{/each}}{{/if}}
 </div>

@@ -333,3 +333,21 @@ main {
 .logo {
   max-width:20%;
 }
+
+.test {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  float:right;
+  position: relative;
+}
+
+.icon{
+
+  height: 50px;
+  width: 50px;
+  float:right;
+  background-repeat: no-repeat;
+  background-color:#F5A623 ;
+  padding-bottom: 100px;
+}

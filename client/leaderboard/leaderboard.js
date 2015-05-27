@@ -26,6 +26,11 @@ Template.leaderboard.rendered = function (){
 
 Template.leaderboard.helpers ({
 
+    number: function(){
+        console.log (this.name)
+        return this.phase
+    },
+
         published: function(){
             return Session.get('Published')
         },
