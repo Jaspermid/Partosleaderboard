@@ -4,6 +4,13 @@
 
 Template.leaderboard.rendered = function (){
 
+    var result = Meteor.http.get('http://www.oipa.nl/api/v3/activities/41AAA-00043782/', {timeout:30000});
+            console.log(result)
+
+
+
+
+
     $('.sort_by_score').addClass("active");
     Session.set ("sort_by_score", true)
     $('.published').addClass("active");
@@ -18,7 +25,6 @@ Template.leaderboard.rendered = function (){
     }
     else {
         $('.implementing').addClass("selected")
-
     }
 
 }
