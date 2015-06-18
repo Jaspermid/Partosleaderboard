@@ -1,0 +1,112 @@
+<template name = "implementingPage">
+<main>
+          <div class="main-header">
+
+            <img src="{{logo}}" title="leaderboard"/>
+            <h1>{{name}}</h1>
+            <p>{{description}}</p>
+
+          </div>
+
+
+
+          <div class="not-published">
+
+            <div class="current-step">
+
+              <!-- Change the current step here -->
+
+              <h2>current step: <span class="red-text">{{phasenumber}}.{{phasename}}</span></h2>
+
+              <!-- Change the current step icon here. -->
+              <!-- Completed step icon values: step1, step2, step3, step4, step5 -->
+              <!-- Current step icon values: step1-red, step2-red, step3-red, step4-red, step5-red -->
+              <!-- Add the inactive class to indicate non-completed or non current step -->
+
+              <div class="step-container">
+                <div class="step-icon step1"></div>
+                <div class="step-icon step2"></div>
+                <div class="step-icon step3"></div>
+                <div class="step-icon step4"></div>
+                <div class="step-icon step5"></div>
+              </div>
+
+              <!-- example 2-->
+              <!--
+              <div class="icon-container">
+                <div class="step-icon step1"></div>
+                <div class="step-icon step2"></div>
+                <div class="step-icon step3"></div>
+                <div class="step-icon step4-red"></div>
+                <div class="step-icon step5 inactive"></div>
+              </div>
+              -->
+
+            </div>
+
+            <div class="details">
+              <div class="details-top"><div class="triangle"></div></div>
+              <div class="details-content">
+
+                <h2>FIVE STEP PROGRAM</h2>
+
+                <div class="item">
+                  <div class="icon step1-white"></div>
+                  <h3>1. STARTING TO PUBLISH</h3>
+                  <p>
+                    In the starting to Publish phase organisation are trying to find the organisational purpose behind impementing IATI, 
+                  </p>
+               </div>
+
+               <div class="item">
+                 <div class="icon step2-white"></div>
+                 <h3>2. PLANNING</h3>
+                 <p>
+                   Step detail lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque elementum lorem, sit amet lacinia lorem. Phasellus eget mauris ut urna convallis placerat vitae non ipsum. Fusce pretium massa sit amet nisi bibendum ultricies.
+                 </p>
+              </div>
+
+              <div class="item">
+                <div class="icon step3-white"></div>
+                <h3>3. DATA MAPPING</h3>
+                <p>
+                  Step detail lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque elementum lorem, sit amet lacinia lorem. Phasellus eget mauris ut urna convallis placerat vitae non ipsum. Fusce pretium massa sit amet nisi bibendum ultricies.
+                </p>
+             </div>
+
+             <div class="item">
+               <div class="icon step4-white"></div>
+               <h3>4. PROTOTYPE </h3>
+               <p>
+                 Step detail lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque elementum lorem, sit amet lacinia lorem. Phasellus eget mauris ut urna convallis placerat vitae non ipsum. Fusce pretium massa sit amet nisi bibendum ultricies.
+               </p>
+            </div>
+
+            <div class="item last">
+              <div class="icon step5-white"></div>
+              <h3>5. GETTING READY TO PUBLISH</h3>
+              <p>
+                Step detail lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque elementum lorem, sit amet lacinia lorem. Phasellus eget mauris ut urna convallis placerat vitae non ipsum. Fusce pretium massa sit amet nisi bibendum ultricies.
+              </p>
+           </div>
+
+
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+
+
+            <div class="main-back">
+
+            <a href="{{pathFor 'leaderboard'}}">Back to leaderboard</a>
+
+          </div>
+
+
+        </main>
+</template>
