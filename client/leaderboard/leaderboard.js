@@ -5,9 +5,11 @@
 Template.leaderboard.rendered = function (){
 
     var result = Meteor.http.get('http://www.oipa.nl/api/v3/activities/41AAA-00043782/', {timeout:30000});
-            console.log(result)
+    console.log("the result of XML parse =" + result)
 
 
+
+    
 
 
 
