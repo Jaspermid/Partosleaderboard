@@ -38,6 +38,10 @@ Template.leaderboard.helpers ({
         return this.total_count
     },
 
+    phase: function(){
+        return this.phase
+    },
+
         published: function(){
             return Session.get('Published')
         },
