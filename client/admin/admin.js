@@ -56,6 +56,7 @@ Template.admin.events ({
             "file": $('.publishing_org_file').val(),
             "exclusion": $('.publishing_org_exclusion').val(),
             "schedule": $('.publishing_org_schedule').val(),
+            "kvk": $('.publishing_org_identifier').val(),
         }
 
         )

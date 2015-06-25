@@ -4,7 +4,7 @@
 
 Template.leaderboard.rendered = function (){
 
-    var result = Meteor.http.get('http://www.oipa.nl/api/v3/activities/41AAA-00043782/', {timeout:30000});
+    var result = 
     console.log("the result of XML parse =" + result)
 
 
@@ -35,8 +35,7 @@ Template.leaderboard.rendered = function (){
 Template.leaderboard.helpers ({
 
     number: function(){
-        console.log (this.name)
-        return this.phase
+        return this.total_count
     },
 
         published: function(){
