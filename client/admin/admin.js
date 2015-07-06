@@ -52,7 +52,6 @@ Template.admin.events ({
             "logo": $('.publishing_org_logo').val(),
             "notes": $('.publishing_org_notes').val(),
             "date": $('.publishing_org_date').val(),
-            "number": $('.publishing_org_number').val(),
             "file": $('.publishing_org_file').val(),
             "exclusion": $('.publishing_org_exclusion').val(),
             "schedule": $('.publishing_org_schedule').val(),
