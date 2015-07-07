@@ -6,6 +6,7 @@ Template.leaderboard.rendered = function (){
 
     var result = 
     console.log("the result of XML parse =" + result)
+    console.log (comprehensiveness)
 
 
 

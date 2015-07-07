@@ -13,6 +13,26 @@
 
           </div>
 
+         
+          <div class="leaderboard">
+            <div class ="published">
+
+
+<!-- list the published  organisations--> 
+
+            <div class="row" onclick="window.location='{{pathFor 'publishedPage'}}';">
+              <div class="progress" style="width:100%"></div>
+              <div class="date">{{date}}</div>
+              <div class="content">
+         
+                <p>
+                Number of activities: {{this.total_count}}</p>
+              </div>
+            </div>
+      </div>
+      </div>
+    
+
           <div class="main-back">
 
             <a href="{{pathFor 'leaderboard'}}">Back to leaderboard</a>
@@ -22,8 +42,11 @@
 
         </main>
 
+      
 
 
+
+           
 
 
 
