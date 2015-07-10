@@ -1,23 +1,19 @@
 <template name="layout">
 
 
-    <body>
+	<body>
+		<div class = "all">
+			{{> navbar}}
 
-    <div class = "all">
-
-    
-
-                {{> navbar}}
-            
-        <div class="container">
-            {{> yield}}
-        </div>
+			<div class="container">
+				{{> yield}}
+			</div>
 
 
-    </div>
+		</div>
 
 
-    </body>
+	</body>
 
 
 
