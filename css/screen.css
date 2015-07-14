@@ -359,4 +359,12 @@ main {
     margin-right: auto; 
 
   }
+
+  .published-stats{
+    background-color: #F5A623;
+  }
+}
+
+.first {
+  margin-top: 50px;
 }

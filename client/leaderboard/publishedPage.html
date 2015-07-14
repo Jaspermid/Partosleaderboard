@@ -19,15 +19,6 @@
 
 <!-- list the published  organisations--> 
 
-            <div class="row" onclick="window.location='{{pathFor 'publishedPage'}}';">
-              <div class="progress" style="width:100%"></div>
-              <div class="date">{{date}}</div>
-              <div class="content">
-         
-                <p>
-                Number of activities: {{this.total_count}}</p>
-              </div>
-            </div>
       </div>
       </div>
     
@@ -44,40 +35,34 @@
             <div class="details">
               <div class="details-top"></div>
               <div class="details-content">
+                <div class="published-stats">
 
-                <h2>Publishing statistics</h2>
 
+                  <div class="item"></div>
+
+               
                 <div class="item">
-                  <div class="icon step1-white"></div>
-                  <h3>1. STARTING TO PUBLISH</h3>
-                  <p>
-                    {{this.total_count}}
-                  </p>
+             
+                  <h3>Number of activities:  {{this.total_count}}</h3>
+                 
+               </div>
+               <div class="item">
+             
+                  <h3>First published:  TEST</h3>
+                 
                </div>
 
-               <div class="item">
-                 <div class="icon step2-white"></div>
-                 <h3>2. PLANNING</h3>
-                 <p>
-                   Step detail lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque elementum lorem, sit amet lacinia lorem. Phasellus eget mauris ut urna convallis placerat vitae non ipsum. Fusce pretium massa sit amet nisi bibendum ultricies.
-                 </p>
-              </div>
+                <div class="item">
+             
+                  <h3>Last updated:  TEST</h3>
+                 
+               </div>
 
-              <div class="item">
-                <div class="icon step3-white"></div>
-                <h3>3. DATA MAPPING</h3>
-                <p>
-                  Step detail lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque elementum lorem, sit amet lacinia lorem. Phasellus eget mauris ut urna convallis placerat vitae non ipsum. Fusce pretium massa sit amet nisi bibendum ultricies.
-                </p>
-             </div>
-
-             <div class="item">
-               <div class="icon step4-white"></div>
-               <h3>4. PROTOTYPE </h3>
-               <p>
-                 Step detail lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque elementum lorem, sit amet lacinia lorem. Phasellus eget mauris ut urna convallis placerat vitae non ipsum. Fusce pretium massa sit amet nisi bibendum ultricies.
-               </p>
-            </div>
+            <div class="item">
+             
+                  <h3>Comprehensiveness score: Test </h3>
+                 
+               </div>
 
             <div class="item last">
               <div class="icon step5-white"></div>
@@ -95,7 +80,7 @@
 
 
           </div>
-
+</div>
 
 
             <div class="main-back">
