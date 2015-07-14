@@ -1,0 +1,126 @@
+<template name ="publishedPage">
+
+
+
+
+
+        <main>
+          <div class="main-header">
+            <img class ="logo" src="{{logo}}" title="leaderboard"/>
+            <h1>{{this.name}}</h1>
+            <p>{{description}}</p>
+
+          </div>
+
+         
+          <div class="leaderboard">
+            <div class ="published">
+
+
+<!-- list the published  organisations--> 
+
+            <div class="row" onclick="window.location='{{pathFor 'publishedPage'}}';">
+              <div class="progress" style="width:100%"></div>
+              <div class="date">{{date}}</div>
+              <div class="content">
+         
+                <p>
+                Number of activities: {{this.total_count}}</p>
+              </div>
+            </div>
+      </div>
+      </div>
+    
+
+         
+
+ 
+
+
+          <div class="not-published">
+
+          
+
+            <div class="details">
+              <div class="details-top"></div>
+              <div class="details-content">
+
+                <h2>Publishing statistics</h2>
+
+                <div class="item">
+                  <div class="icon step1-white"></div>
+                  <h3>1. STARTING TO PUBLISH</h3>
+                  <p>
+                    {{this.total_count}}
+                  </p>
+               </div>
+
+               <div class="item">
+                 <div class="icon step2-white"></div>
+                 <h3>2. PLANNING</h3>
+                 <p>
+                   Step detail lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque elementum lorem, sit amet lacinia lorem. Phasellus eget mauris ut urna convallis placerat vitae non ipsum. Fusce pretium massa sit amet nisi bibendum ultricies.
+                 </p>
+              </div>
+
+              <div class="item">
+                <div class="icon step3-white"></div>
+                <h3>3. DATA MAPPING</h3>
+                <p>
+                  Step detail lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque elementum lorem, sit amet lacinia lorem. Phasellus eget mauris ut urna convallis placerat vitae non ipsum. Fusce pretium massa sit amet nisi bibendum ultricies.
+                </p>
+             </div>
+
+             <div class="item">
+               <div class="icon step4-white"></div>
+               <h3>4. PROTOTYPE </h3>
+               <p>
+                 Step detail lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque elementum lorem, sit amet lacinia lorem. Phasellus eget mauris ut urna convallis placerat vitae non ipsum. Fusce pretium massa sit amet nisi bibendum ultricies.
+               </p>
+            </div>
+
+            <div class="item last">
+              <div class="icon step5-white"></div>
+              <h3>5. GETTING READY TO PUBLISH</h3>
+              <p>
+                Step detail lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque elementum lorem, sit amet lacinia lorem. Phasellus eget mauris ut urna convallis placerat vitae non ipsum. Fusce pretium massa sit amet nisi bibendum ultricies.
+              </p>
+           </div>
+
+
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+
+
+            <div class="main-back">
+
+            <a href="{{pathFor 'leaderboard'}}">Back to leaderboard</a>
+
+          </div>
+
+       
+
+
+
+        </main>
+
+      
+
+ <div class="main-back">
+
+            <a href="{{pathFor 'leaderboard'}}">Back to leaderboard</a>
+
+          </div>
+
+           
+
+
+
+
+</template>
