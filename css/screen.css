@@ -240,6 +240,15 @@ main {
         border-bottom: 40px solid #D32718;
         border-left: 360px solid transparent;
         border-right: 360px solid transparent; }
+        .not-published .details .details-top .published-triangle {
+        width: 720px;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        margin-left: -360px;
+        border-bottom: 40px solid #F5A623;
+        border-left: 360px solid transparent;
+        border-right: 360px solid transparent; }
     .not-published .details .details-content {
       color: #FFF;
       background-color: #D32718; }
@@ -368,3 +377,5 @@ main {
 .first {
   margin-top: 50px;
 }
+
+.published-triangle{}
