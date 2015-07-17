@@ -11,6 +11,10 @@
 
 Template.admin.helpers ({
 
+    userIsAdmin: function (){
+        return (Meteor.user().emails[0].address === "info@partos.nl")
+    },
+
     published: function(){
       return Session.get('Published')
   },

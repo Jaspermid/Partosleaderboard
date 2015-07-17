@@ -1,12 +1,17 @@
     <template name = "admin">
-{{> loginButtons}}
 
 
+  
+   
 
         <main>
+          {{> loginButtons}}
           <div class="main-header">
             <img src="/img/iati_logo.png" title="leaderboard"/>
+
             <h1>Admin IATI Leaderboard</h1>
+
+             {{#if userIsAdmin}}
 
             <!-- Toggling between editing published and implementing organisation --> 
             <div class="main-sort">
@@ -179,7 +184,12 @@
 
 
 
-            {{/if}}  </div>
+            {{/if}} 
+{{else}}
+
+<h2>You are not logged in as an Admin, please login (email is info@partos.nl, password the usual Partos password)</h2>
+
+                  {{/if}}</div>
 
         </main>
 
